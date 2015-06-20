@@ -58,5 +58,6 @@ def extract_features(document):
 print "bivsdf"
 classifier = pickle.load(open("FSsentimentTrained.pickle",'rb')) 
 tweet = raw_input("Give the tweet you want analysed: ")
+print extract_features(tweet.split())
 print classifier.classify(extract_features(tweet.split()))
 
